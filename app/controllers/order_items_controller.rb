@@ -4,7 +4,7 @@ class OrderItemsController < ApplicationController
   before_action :set_order_item, only: %i(edit update destroy receive)
 
   def index
-    if @order.item_count_shortage? && @order.closed?
+    if @order.not_realized?
       redirect_to orders_path
       return
     end

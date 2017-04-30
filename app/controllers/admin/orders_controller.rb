@@ -4,6 +4,7 @@ class Admin::OrdersController < Admin::ApplicationController
   def close
     order = Order.find(params[:id])
 
+    # TODO: 例外を入れる PR がマージされたら、ここらへんを realized? で書き換える
     if order.close
 
       if order.item_count_satisfied?
