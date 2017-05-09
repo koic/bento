@@ -1,3 +1,3 @@
 $(function() {
-  $('.auto-fadeout').fadeOut(7000);
+  $('.fadeout').fadeOut(7000);
 });
